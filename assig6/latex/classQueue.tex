@@ -1,0 +1,124 @@
+\section{Queue Class Reference}
+\label{classQueue}\index{Queue@{Queue}}
+
+
+{\ttfamily \#include $<$objqueue.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Queue} (int {\bf max\+\_\+cells})
+\item 
+{\bf $\sim$\+Queue} ()
+\item 
+int {\bf enqueue} (void $\ast$ptr)
+\item 
+void $\ast$ {\bf dequeue} ()
+\item 
+void $\ast$ {\bf peek} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$$\ast$ {\bf head}
+\item 
+void $\ast$$\ast$ {\bf tail}
+\item 
+void $\ast$$\ast$ {\bf wrap}
+\item 
+int {\bf cells\+\_\+used}
+\item 
+int {\bf max\+\_\+cells}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define a queue; each entry can hold a pointer to anything. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue(int max\+\_\+cells)}]{\setlength{\rightskip}{0pt plus 5cm}Queue\+::\+Queue (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+\_\+cells}
+\end{DoxyParamCaption}
+)}\label{classQueue_a9ded4fd6146f906dad5101463956d362}
+Create a queue by initializing the fields of the object, including allocating memory to hold the queue entries. 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{Queue@{Queue}!````~Queue@{$\sim$\+Queue}}
+\index{````~Queue@{$\sim$\+Queue}!Queue@{Queue}}
+\subsubsection[{$\sim$\+Queue()}]{\setlength{\rightskip}{0pt plus 5cm}Queue\+::$\sim$\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classQueue_a00d119db8fa3050da37746e82cbcf94f}
+Destructor\+: cleans up a \doxyref{Queue}{p.}{classQueue} object by deleting the memory for holding the queue entries, but not the entries themselves. 
+
+\subsection{Member Function Documentation}
+\index{Queue@{Queue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue@{Queue}}
+\subsubsection[{dequeue()}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Queue\+::dequeue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classQueue_a30c82e655d4420c27ef5e4ce17fa99e8}
+Removes from , and returns it. \begin{DoxyReturn}{Returns}
+Top entry of the stack, N\+U\+LL if stack is empty. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{Queue@{Queue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue@{Queue}}
+\subsubsection[{enqueue(void $\ast$ptr)}]{\setlength{\rightskip}{0pt plus 5cm}int Queue\+::enqueue (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{classQueue_ad9b96ff57dfefab9e60b11ab912353b7}
+Pushes a pointer onto a \doxyref{Queue}{p.}{classQueue}. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Pointer to be pushed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 if not. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{Queue@{Queue}!peek@{peek}}
+\index{peek@{peek}!Queue@{Queue}}
+\subsubsection[{peek()}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Queue\+::peek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classQueue_a1f9f06c0b315827d94f5b1ec5daf1de9}
+
+
+\subsection{Member Data Documentation}
+\index{Queue@{Queue}!cells\+\_\+used@{cells\+\_\+used}}
+\index{cells\+\_\+used@{cells\+\_\+used}!Queue@{Queue}}
+\subsubsection[{cells\+\_\+used}]{\setlength{\rightskip}{0pt plus 5cm}int Queue\+::cells\+\_\+used}\label{classQueue_a47cb541e5ca496efd09023dee41b2b5e}
+\index{Queue@{Queue}!head@{head}}
+\index{head@{head}!Queue@{Queue}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$$\ast$ Queue\+::head}\label{classQueue_abdc5144965879f7cbecaa626b9eaa95b}
+\index{Queue@{Queue}!max\+\_\+cells@{max\+\_\+cells}}
+\index{max\+\_\+cells@{max\+\_\+cells}!Queue@{Queue}}
+\subsubsection[{max\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}int Queue\+::max\+\_\+cells}\label{classQueue_a07fd3bda64f495cb6074ad321f00bc7d}
+\index{Queue@{Queue}!tail@{tail}}
+\index{tail@{tail}!Queue@{Queue}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$$\ast$ Queue\+::tail}\label{classQueue_a3b8a9655038d7b25ffb9943be6b261ca}
+\index{Queue@{Queue}!wrap@{wrap}}
+\index{wrap@{wrap}!Queue@{Queue}}
+\subsubsection[{wrap}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$$\ast$ Queue\+::wrap}\label{classQueue_ad66af2a9805a7339ef9de94dd19a152a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf objqueue.\+h}\item 
+{\bf objqueue.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\section{Tnode Class Reference}
+\label{classTnode}\index{Tnode@{Tnode}}
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tnode} (const char $\ast$string\+Data)
+\item 
+void {\bf add} (const char $\ast${\bf data})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ {\bf data}
+\item 
+{\bf Tnode} $\ast$ {\bf left}
+\item 
+{\bf Tnode} $\ast$ {\bf right}
+\item 
+int {\bf count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tnode@{Tnode}!Tnode@{Tnode}}
+\index{Tnode@{Tnode}!Tnode@{Tnode}}
+\subsubsection[{Tnode(const char $\ast$string\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Tnode\+::\+Tnode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{classTnode_a27c905591b41ce7f476f075cc97f3b98}
+Default constructor for \doxyref{Tnode}{p.}{classTnode} 
+
+\subsection{Member Function Documentation}
+\index{Tnode@{Tnode}!add@{add}}
+\index{add@{add}!Tnode@{Tnode}}
+\subsubsection[{add(const char $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}void Tnode\+::add (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{classTnode_ae75b7523e50ac9d3aa6f868925153004}
+Takes given string (C style) to the left node if the string comes alphabetically before the string in the current node, or takes it to the right node if it comes alphabetically after the string in the current node. After figuring out child node to go to, it adds a new node with the data if it is N\+U\+LL, or calls the add function on the child node if it is not. If the strings are equal, it adds 1 to count in the \doxyref{Tnode}{p.}{classTnode}. I have decided to make the comparision case sensitive. 
+\begin{DoxyParams}{Parameters}
+{\em data} & C style string to add to tree as data \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by Tree\+::add().
+
+
+
+\subsection{Member Data Documentation}
+\index{Tnode@{Tnode}!count@{count}}
+\index{count@{count}!Tnode@{Tnode}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}int Tnode\+::count}\label{classTnode_a8e98450fcea5c1b32c01bb5e9f8a6f79}
+\index{Tnode@{Tnode}!data@{data}}
+\index{data@{data}!Tnode@{Tnode}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Tnode\+::data}\label{classTnode_a4ca266cd45018cb72e53f2fff9034f4e}
+
+
+Referenced by Tree\+::free\+Tree\+Helper(), main(), and Tree\+::print\+Ascending\+Helper().
+
+\index{Tnode@{Tnode}!left@{left}}
+\index{left@{left}!Tnode@{Tnode}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tnode}$\ast$ Tnode\+::left}\label{classTnode_af00c71fd885633892fcdbdb215a4eb83}
+
+
+Referenced by Tree\+::free\+Tree\+Helper(), main(), and Tree\+::print\+Ascending\+Helper().
+
+\index{Tnode@{Tnode}!right@{right}}
+\index{right@{right}!Tnode@{Tnode}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tnode}$\ast$ Tnode\+::right}\label{classTnode_a346e5d0c8cc63a8082d605b13e23daf8}
+
+
+Referenced by Tree\+::free\+Tree\+Helper(), main(), and Tree\+::print\+Ascending\+Helper().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Tree.\+h}\item 
+{\bf Tree.\+cpp}\end{DoxyCompactItemize}

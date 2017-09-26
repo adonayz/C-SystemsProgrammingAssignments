@@ -1,0 +1,149 @@
+\section{Tree Class Reference}
+\label{classTree}\index{Tree@{Tree}}
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tree} ()
+\item 
+void {\bf add} (const char $\ast$data)
+\item 
+void {\bf print\+Ascending} () const 
+\item 
+void {\bf print\+Ascending\+Helper} ({\bf Tnode} $\ast$node) const 
+\item 
+void {\bf free\+Tree} ()
+\item 
+void {\bf free\+Tree\+Helper} ({\bf Tnode} $\ast$node)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tnode} $\ast$ {\bf root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection[{Tree()}]{\setlength{\rightskip}{0pt plus 5cm}Tree\+::\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classTree_ad376a7c639d857312f5de2ef47482f68}
+Default constructor for General\+Number 
+
+References root.
+
+
+
+\subsection{Member Function Documentation}
+\index{Tree@{Tree}!add@{add}}
+\index{add@{add}!Tree@{Tree}}
+\subsubsection[{add(const char $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::add (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{classTree_aa5a561f2c19c292213390aebe89993ce}
+Adds given string (C style) to a newly instantiated node and adds it to the tree if the tree is empty. If the tree is not empty, it calls the add function on the root \doxyref{Tnode}{p.}{classTnode}. 
+\begin{DoxyParams}{Parameters}
+{\em data} & C style string to add to tree as data \\
+\hline
+\end{DoxyParams}
+
+
+References Tnode\+::add(), and root.
+
+
+
+Referenced by main().
+
+\index{Tree@{Tree}!free\+Tree@{free\+Tree}}
+\index{free\+Tree@{free\+Tree}!Tree@{Tree}}
+\subsubsection[{free\+Tree()}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::free\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classTree_a3ec1fe9fa37b1b0cfa03f6ffca8cb68a}
+Frees the nodes in the tree using postorder transversal. This function has a helper function which accepts a node and uses postorder transveral by recursion to free all nodes that brach out from the given node. If tree is empty, it prints an appropriate message. 
+
+References free\+Tree\+Helper(), and root.
+
+
+
+Referenced by main().
+
+\index{Tree@{Tree}!free\+Tree\+Helper@{free\+Tree\+Helper}}
+\index{free\+Tree\+Helper@{free\+Tree\+Helper}!Tree@{Tree}}
+\subsubsection[{free\+Tree\+Helper(\+Tnode $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::free\+Tree\+Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf Tnode} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{classTree_a0f0ee127098e123cc6aa31f4c2327470}
+Accepts a node and uses postorder transveral by recursion to free all nodes that brach out from the given node. This function should not be called because it is a helper function. 
+\begin{DoxyParams}{Parameters}
+{\em node} & Is the root node of the tree you want to free \\
+\hline
+\end{DoxyParams}
+
+
+References Tnode\+::data, Tnode\+::left, and Tnode\+::right.
+
+
+
+Referenced by free\+Tree().
+
+\index{Tree@{Tree}!print\+Ascending@{print\+Ascending}}
+\index{print\+Ascending@{print\+Ascending}!Tree@{Tree}}
+\subsubsection[{print\+Ascending() const }]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::print\+Ascending (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classTree_a7c917728e8546bf2ca0e15faa832ec9b}
+Prints the tree in ascending order of values using inorder transversal on the tree. Has a helper function which accepts a node and prints recursion. This is the main function that is used to print the tree. 
+
+References print\+Ascending\+Helper(), and root.
+
+
+
+Referenced by main().
+
+\index{Tree@{Tree}!print\+Ascending\+Helper@{print\+Ascending\+Helper}}
+\index{print\+Ascending\+Helper@{print\+Ascending\+Helper}!Tree@{Tree}}
+\subsubsection[{print\+Ascending\+Helper(\+Tnode $\ast$node) const }]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+::print\+Ascending\+Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf Tnode} $\ast$}]{node}
+\end{DoxyParamCaption}
+) const}\label{classTree_a52a45e3b5b534f30773906866cdfdc67}
+This is a helper function that prints the tree in ascending order of values using inorder transversal on the tree. Uses recursion for inorder transversal. This function should not be called because it is a helper function. 
+\begin{DoxyParams}{Parameters}
+{\em node} & Is the root node of the tree you want to print \\
+\hline
+\end{DoxyParams}
+
+
+References Tnode\+::data, Tnode\+::left, and Tnode\+::right.
+
+
+
+Referenced by print\+Ascending().
+
+
+
+\subsection{Member Data Documentation}
+\index{Tree@{Tree}!root@{root}}
+\index{root@{root}!Tree@{Tree}}
+\subsubsection[{root}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tnode}$\ast$ Tree\+::root}\label{classTree_a29407ff713b7d18242d3ba2d505fda46}
+
+
+Referenced by add(), free\+Tree(), print\+Ascending(), and Tree().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Tree.\+h}\item 
+{\bf Tree.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\section{print\+\_\+arrays.\+h File Reference}
+\label{print__arrays_8h}\index{print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf print\+\_\+int\+\_\+array} (int a[$\,$], int size)
+\item 
+void {\bf print\+\_\+double\+\_\+array} (double a[$\,$], int size)
+\item 
+int {\bf save\+Array} (int argc, const char $\ast$argv[$\,$], int $\ast$input\+\_\+array, int array\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}!print\+\_\+double\+\_\+array@{print\+\_\+double\+\_\+array}}
+\index{print\+\_\+double\+\_\+array@{print\+\_\+double\+\_\+array}!print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}}
+\subsubsection[{print\+\_\+double\+\_\+array(double a[], int size)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+double\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{double}]{a[$\,$], }
+\item[{int}]{num\+\_\+entries}
+\end{DoxyParamCaption}
+)}\label{print__arrays_8h_a2c63d62a01ac25bf7c4fa67be16bf004}
+Print an array of doubles, one per line. 
+\begin{DoxyParams}{Parameters}
+{\em a} & Array of doubles to print \\
+\hline
+{\em num\+\_\+entries} & Number of entries in the array \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by main().
+
+\index{print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}!print\+\_\+int\+\_\+array@{print\+\_\+int\+\_\+array}}
+\index{print\+\_\+int\+\_\+array@{print\+\_\+int\+\_\+array}!print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}}
+\subsubsection[{print\+\_\+int\+\_\+array(int a[], int size)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+int\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{int}]{a[$\,$], }
+\item[{int}]{num\+\_\+entries}
+\end{DoxyParamCaption}
+)}\label{print__arrays_8h_a095c9149423818a7dbfe4003e5940f97}
+File \doxyref{print\+\_\+arrays.\+h}{p.}{print__arrays_8h} \begin{DoxyAuthor}{Author}
+Adonay Resom (Started by Mike Ciaraldi)
+\end{DoxyAuthor}
+Header file for functions that print arrays.
+
+file \doxyref{print\+\_\+arrays.\+c}{p.}{print__arrays_8c} \begin{DoxyAuthor}{Author}
+Adonay Resom (Started by Mike Ciaraldi)
+\end{DoxyAuthor}
+Functions for printing arrays.\+Print an array of ints, one per line. 
+\begin{DoxyParams}{Parameters}
+{\em a} & Array of integers to print \\
+\hline
+{\em num\+\_\+entries} & Number of entries in the array \\
+\hline
+\end{DoxyParams}
+\index{print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}!save\+Array@{save\+Array}}
+\index{save\+Array@{save\+Array}!print\+\_\+arrays.\+h@{print\+\_\+arrays.\+h}}
+\subsubsection[{save\+Array(int argc, const char $\ast$argv[], int $\ast$input\+\_\+array, int array\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}int save\+Array (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv[$\,$], }
+\item[{int $\ast$}]{input\+\_\+array, }
+\item[{int}]{array\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{print__arrays_8h_aa960937ceb8a98896974fab1e575107c}
+Collects arguments from command line, converts them to integer, saves them into an array located in the main function through a pointer 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments entered plus the prompt itself \\
+\hline
+{\em argv} & An array that contains the arguments entered through the command line (in order of entry) \\
+\hline
+{\em input\+\_\+array} & A pointer to an integer array in which the arguments entered will be stored in \\
+\hline
+{\em array\+\_\+size} & Number of elements allowed to be saved into the input\+\_\+array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL indicates error. All other values indicate success! 
+\end{DoxyReturn}
+loop that adds command line arguments into an array after converting them into an integer. Loop stops if maximum array size has been reached or all arguments are processed 
+
+Referenced by main().
+

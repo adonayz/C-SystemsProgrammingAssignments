@@ -1,0 +1,82 @@
+\section{sort\+\_\+ascending.\+h File Reference}
+\label{sort__ascending_8h}\index{sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf sort\+\_\+ascending} (int $\ast$array\+\_\+to\+\_\+sort, int array\+\_\+size)
+\item 
+int {\bf random\+\_\+integer} (int max)
+\item 
+int $\ast$ {\bf random\+\_\+array} (int size, int max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}!random\+\_\+array@{random\+\_\+array}}
+\index{random\+\_\+array@{random\+\_\+array}!sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}}
+\subsubsection[{random\+\_\+array(int size, int max)}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ random\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{int}]{size, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{sort__ascending_8h_a962e9ab82ef0764422977f23493c6f6e}
+Generate a specified size array filled with random numbers 
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of array created \\
+\hline
+{\em max} & Maximum value for each random numbers generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+randomly generated array 
+\end{DoxyReturn}
+
+
+References random\+\_\+integer().
+
+
+
+Referenced by main().
+
+\index{sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}!random\+\_\+integer@{random\+\_\+integer}}
+\index{random\+\_\+integer@{random\+\_\+integer}!sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}}
+\subsubsection[{random\+\_\+integer(int max)}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+integer (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{sort__ascending_8h_a14c2b75285e2c48126d19d3a1dcdb075}
+Return a random number from 0 to maximum specified number. 
+\begin{DoxyParams}{Parameters}
+{\em max} & Maximum specified value for random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random number 
+\end{DoxyReturn}
+
+
+Referenced by random\+\_\+array().
+
+\index{sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}!sort\+\_\+ascending@{sort\+\_\+ascending}}
+\index{sort\+\_\+ascending@{sort\+\_\+ascending}!sort\+\_\+ascending.\+h@{sort\+\_\+ascending.\+h}}
+\subsubsection[{sort\+\_\+ascending(int $\ast$array\+\_\+to\+\_\+sort, int array\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}void sort\+\_\+ascending (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array\+\_\+to\+\_\+sort, }
+\item[{int}]{array\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{sort__ascending_8h_a6c3229109e5f47b9ebb95eb95ff6311b}
+File \doxyref{sort\+\_\+ascending.\+h}{p.}{sort__ascending_8h} \begin{DoxyAuthor}{Author}
+Adonay Resom (Started by Mike Ciaraldi)
+\end{DoxyAuthor}
+Header file for functions that sort arrays in ascending order.
+
+file \doxyref{sort\+\_\+ascending.\+c}{p.}{sort__ascending_8c} \begin{DoxyAuthor}{Author}
+Adonay Resom (Started by Mike Ciaraldi)
+\end{DoxyAuthor}
+Functions for sorting arrays in ascending order.\+Sorts an array\textquotesingle{}s elements in ascending order 
+\begin{DoxyParams}{Parameters}
+{\em array\+\_\+to\+\_\+sort} & A pointer to an integer array containing integers to get sorted \\
+\hline
+{\em array\+\_\+size} & The maximum number of elements allowed in this array \\
+\hline
+\end{DoxyParams}

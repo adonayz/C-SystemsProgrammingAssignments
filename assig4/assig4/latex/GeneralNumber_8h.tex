@@ -1,0 +1,84 @@
+\section{General\+Number.\+h File Reference}
+\label{GeneralNumber_8h}\index{General\+Number.\+h@{General\+Number.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf General\+Number}
+\item 
+class {\bf General\+Long}
+\item 
+class {\bf General\+Rational}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG}~(20)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long {\bf find\+\_\+gcd} (long a, long b)
+\item 
+long {\bf find\+\_\+lcd} (long a, long b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{General\+Number.\+h@{General\+Number.\+h}!M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG@{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG}}
+\index{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG@{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG}!General\+Number.\+h@{General\+Number.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG~(20)}\label{GeneralNumber_8h_a4536bcf3e78506090145549baf064f59}
+
+
+Referenced by General\+Long\+::to\+String(), and General\+Rational\+::to\+String().
+
+
+
+\subsection{Function Documentation}
+\index{General\+Number.\+h@{General\+Number.\+h}!find\+\_\+gcd@{find\+\_\+gcd}}
+\index{find\+\_\+gcd@{find\+\_\+gcd}!General\+Number.\+h@{General\+Number.\+h}}
+\subsubsection[{find\+\_\+gcd(long a, long b)}]{\setlength{\rightskip}{0pt plus 5cm}long find\+\_\+gcd (
+\begin{DoxyParamCaption}
+\item[{long}]{a, }
+\item[{long}]{b}
+\end{DoxyParamCaption}
+)}\label{GeneralNumber_8h_a3b1a81b44872a0bc193738b3762e1ec1}
+Finds the Greatest Common Divisor of two numbers 
+\begin{DoxyParams}{Parameters}
+{\em a} & One of two numbers we want the G\+CD of \\
+\hline
+{\em b} & One of two numbers we want the G\+CD of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The G\+CD of the two numbers in long format 
+\end{DoxyReturn}
+
+
+Referenced by find\+\_\+lcd(), and General\+Rational\+::to\+Canonical\+Form().
+
+\index{General\+Number.\+h@{General\+Number.\+h}!find\+\_\+lcd@{find\+\_\+lcd}}
+\index{find\+\_\+lcd@{find\+\_\+lcd}!General\+Number.\+h@{General\+Number.\+h}}
+\subsubsection[{find\+\_\+lcd(long a, long b)}]{\setlength{\rightskip}{0pt plus 5cm}long find\+\_\+lcd (
+\begin{DoxyParamCaption}
+\item[{long}]{a, }
+\item[{long}]{b}
+\end{DoxyParamCaption}
+)}\label{GeneralNumber_8h_a1a7f5010aff855526092e34b38b97bea}
+Finds the Least Common Denominator of two numbers 
+\begin{DoxyParams}{Parameters}
+{\em a} & One of two numbers we want L\+CD of \\
+\hline
+{\em b} & One of two numbers we want L\+CD of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The G\+CD of the two numbers in long format 
+\end{DoxyReturn}
+
+
+References find\+\_\+gcd().
+
+
+
+Referenced by General\+Rational\+::add().
+

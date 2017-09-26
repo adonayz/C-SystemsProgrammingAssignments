@@ -1,0 +1,237 @@
+\section{General\+Number Class Reference}
+\label{classGeneralNumber}\index{General\+Number@{General\+Number}}
+
+
+{\ttfamily \#include $<$General\+Number.\+h$>$}
+
+Inheritance diagram for General\+Number\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeneralNumber}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf General\+Number} ()
+\item 
+virtual char $\ast$ {\bf to\+String} () const =0
+\item 
+char $\ast$ {\bf foo} () const 
+\item 
+virtual {\bf General\+Long} $\ast$ {\bf to\+General\+Long} () const =0
+\item 
+virtual {\bf General\+Rational} $\ast$ {\bf to\+General\+Rational} () const =0
+\item 
+virtual {\bf General\+Double} $\ast$ {\bf to\+General\+Double} () const =0
+\item 
+virtual {\bf General\+Number} $\ast$ {\bf add} ({\bf General\+Number} $\ast$g) const =0
+\item 
+virtual {\bf General\+Number} $\ast$ {\bf subtract} ({\bf General\+Number} $\ast$g) const =0
+\item 
+virtual {\bf General\+Number} $\ast$ {\bf multiply} ({\bf General\+Number} $\ast$g) const =0
+\item 
+virtual {\bf General\+Number} $\ast$ {\bf divide} ({\bf General\+Number} $\ast$g) const =0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf General\+Number} $\ast$ {\bf parse} (const char $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{General\+Number@{General\+Number}!General\+Number@{General\+Number}}
+\index{General\+Number@{General\+Number}!General\+Number@{General\+Number}}
+\subsubsection[{General\+Number()}]{\setlength{\rightskip}{0pt plus 5cm}General\+Number\+::\+General\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classGeneralNumber_a3c08bdccb4a03c82932546d5c19e636d}
+Default constructor for \doxyref{General\+Number}{p.}{classGeneralNumber} 
+
+\subsection{Member Function Documentation}
+\index{General\+Number@{General\+Number}!add@{add}}
+\index{add@{add}!General\+Number@{General\+Number}}
+\subsubsection[{add(\+General\+Number $\ast$g) const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Number\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{g}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_abf66663792afad01a954d0326ee28bc7}
+Returns pointer to \doxyref{General\+Number}{p.}{classGeneralNumber} \begin{DoxyReturn}{Returns}
+Pointer to the \doxyref{General\+Number}{p.}{classGeneralNumber} passed in 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a803bf66b7c1d1759a2b4c860afcae462}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_ad9e849aee88d19f5c7c272104b76ce70}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_adc191c69da156fddec21f6e3fa782fbf}.
+
+
+
+Referenced by calculate().
+
+\index{General\+Number@{General\+Number}!divide@{divide}}
+\index{divide@{divide}!General\+Number@{General\+Number}}
+\subsubsection[{divide(\+General\+Number $\ast$g) const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Number\+::divide (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{g}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_a00210335039ff12f5d8cc8d94949a031}
+Returns pointer to \doxyref{General\+Number}{p.}{classGeneralNumber} \begin{DoxyReturn}{Returns}
+Pointer to the \doxyref{General\+Number}{p.}{classGeneralNumber} passed in 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a38b9010a871ad5e7a145859a00f50035}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_a81b9d20f4ce3b2109ee6eeee9334aedd}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_ac0beb44c33a51c751ae26e7cdd63909a}.
+
+
+
+Referenced by calculate().
+
+\index{General\+Number@{General\+Number}!foo@{foo}}
+\index{foo@{foo}!General\+Number@{General\+Number}}
+\subsubsection[{foo() const }]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ General\+Number\+::foo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classGeneralNumber_afedc95deda6c653dd57485930865b6ca}
+Demonstrates a non-\/virtual function. \begin{DoxyReturn}{Returns}
+Freshly-\/allocated C-\/stype string 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{General\+Number@{General\+Number}!multiply@{multiply}}
+\index{multiply@{multiply}!General\+Number@{General\+Number}}
+\subsubsection[{multiply(\+General\+Number $\ast$g) const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Number\+::multiply (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{g}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_ac47d6c7deb64e3eee073a1e5105045fb}
+Returns pointer to \doxyref{General\+Number}{p.}{classGeneralNumber} \begin{DoxyReturn}{Returns}
+Pointer to the \doxyref{General\+Number}{p.}{classGeneralNumber} passed in 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a9e69c74ade61dfd0823c23539a8c11a0}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_a52f58fb3f7f1e21f5399e88d646182b5}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_a682fb3c10fef4df0e87391d155bc3bc6}.
+
+
+
+Referenced by calculate().
+
+\index{General\+Number@{General\+Number}!parse@{parse}}
+\index{parse@{parse}!General\+Number@{General\+Number}}
+\subsubsection[{parse(const char $\ast$s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Number\+::parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classGeneralNumber_aade29fd031d2dc2f8d1285646c738a0b}
+Parses a string representing a \doxyref{General\+Number}{p.}{classGeneralNumber} 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a newly-\/allocated object of the correct subclass, or null pointer if unable to parse. 
+\end{DoxyReturn}
+
+
+Referenced by main(), and start\+\_\+calculator().
+
+\index{General\+Number@{General\+Number}!subtract@{subtract}}
+\index{subtract@{subtract}!General\+Number@{General\+Number}}
+\subsubsection[{subtract(\+General\+Number $\ast$g) const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Number\+::subtract (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{g}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_ae9010718fcbc6fcfe54faabdd19408de}
+Returns pointer to \doxyref{General\+Number}{p.}{classGeneralNumber} \begin{DoxyReturn}{Returns}
+Pointer to the \doxyref{General\+Number}{p.}{classGeneralNumber} passed in 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a795030c46d0a87f407aef98443fe9946}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_a7b591901f7dfe12920d7fd3088bb97ff}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_a173986fdc4590f34c761561c0448aa98}.
+
+
+
+Referenced by calculate().
+
+\index{General\+Number@{General\+Number}!to\+General\+Double@{to\+General\+Double}}
+\index{to\+General\+Double@{to\+General\+Double}!General\+Number@{General\+Number}}
+\subsubsection[{to\+General\+Double() const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Double} $\ast$ General\+Number\+::to\+General\+Double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_a597b8ff270d49970f70b0ba6e5246593}
+Generates an equivalent \doxyref{General\+Double}{p.}{classGeneralDouble} \begin{DoxyReturn}{Returns}
+Pointer to a freshly-\/allocated \doxyref{General\+Double}{p.}{classGeneralDouble} object 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a079cac1a1c6030be3620a2b61e56566c}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_a45714e227a97f7dafdcff19ed87e2cbd}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_a2d1f07c2731071ffa62822de55639828}.
+
+
+
+Referenced by General\+Double\+::add(), General\+Double\+::divide(), General\+Double\+::multiply(), and General\+Double\+::subtract().
+
+\index{General\+Number@{General\+Number}!to\+General\+Long@{to\+General\+Long}}
+\index{to\+General\+Long@{to\+General\+Long}!General\+Number@{General\+Number}}
+\subsubsection[{to\+General\+Long() const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Long} $\ast$ General\+Number\+::to\+General\+Long (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_acafc7321465d601588e47dc270bf147a}
+Generates an equivalent \doxyref{General\+Long}{p.}{classGeneralLong} \begin{DoxyReturn}{Returns}
+Pointer to a freshly-\/allocated \doxyref{General\+Long}{p.}{classGeneralLong} object 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a4ffc3670b85c50b29d39be8579ce0004}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_aadd587b17b9ce5bc6beea2bf065e68ca}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_a67fdd908d3af4a8fefc0657f2eb86dd0}.
+
+
+
+Referenced by General\+Long\+::add(), General\+Long\+::divide(), main(), General\+Long\+::multiply(), and General\+Long\+::subtract().
+
+\index{General\+Number@{General\+Number}!to\+General\+Rational@{to\+General\+Rational}}
+\index{to\+General\+Rational@{to\+General\+Rational}!General\+Number@{General\+Number}}
+\subsubsection[{to\+General\+Rational() const =0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Rational} $\ast$ General\+Number\+::to\+General\+Rational (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_aec6e631e5b839b50224f5c2b76eb1162}
+Generates an equivalent \doxyref{General\+Rational}{p.}{classGeneralRational} \begin{DoxyReturn}{Returns}
+Pointer to a freshly-\/allocated \doxyref{General\+Rational}{p.}{classGeneralRational} object 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a37c87f291c03d8f7bcdf7c7148147f00}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_af474c9b5f3f31934c24ba47230cd5537}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_aa983396c8843991c6bbea52b1d22e51b}.
+
+
+
+Referenced by General\+Rational\+::add(), General\+Rational\+::divide(), General\+Rational\+::multiply(), and General\+Rational\+::subtract().
+
+\index{General\+Number@{General\+Number}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!General\+Number@{General\+Number}}
+\subsubsection[{to\+String() const =0}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ General\+Number\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classGeneralNumber_aa3a0cdda717ff1e29d7c0c6ab2684b70}
+Generates a printable representation of the object. \begin{DoxyReturn}{Returns}
+Freshly-\/allocated C-\/stype string 
+\end{DoxyReturn}
+
+
+Implemented in {\bf General\+Double} \doxyref{}{p.}{classGeneralDouble_a61674c95616042f9b50a837ff7ba387d}, {\bf General\+Rational} \doxyref{}{p.}{classGeneralRational_a592adc36a0593c960c197741ab5b50b9}, and {\bf General\+Long} \doxyref{}{p.}{classGeneralLong_ae3afbc099d82bf5a8eb7d8e9ac32cb87}.
+
+
+
+Referenced by main(), and start\+\_\+calculator().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf General\+Number.\+h}\item 
+{\bf General\+Number.\+cpp}\item 
+{\bf gnparse.\+cpp}\end{DoxyCompactItemize}

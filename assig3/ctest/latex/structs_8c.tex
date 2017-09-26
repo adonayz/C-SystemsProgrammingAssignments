@@ -1,0 +1,227 @@
+\section{structs.\+c File Reference}
+\label{structs_8c}\index{structs.\+c@{structs.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}mystring.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}structs.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf M\+A\+X\+\_\+\+N\+A\+ME}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Employee} $\ast$ {\bf make\+\_\+employee} (char $\ast$name, int birth\+\_\+year, int start\+\_\+year)
+\item 
+void {\bf print\+\_\+employee} (struct {\bf Employee} $\ast$e)
+\item 
+struct {\bf Employee} $\ast$ {\bf random\+\_\+employee} ()
+\item 
+struct {\bf Employee} $\ast$$\ast$ {\bf random\+\_\+employee\+\_\+array} (int count)
+\item 
+void {\bf print\+\_\+employee\+\_\+array} (struct {\bf Employee} $\ast$$\ast$employee\+\_\+array, int count)
+\item 
+struct {\bf Employee} $\ast$$\ast$ {\bf duplicate\+\_\+employee\+\_\+array\+\_\+shallow} (struct {\bf Employee} $\ast$$\ast$employee\+\_\+array, int count)
+\item 
+void {\bf free\+\_\+employee\+\_\+array} (struct {\bf Employee} $\ast$$\ast$employee\+\_\+array, int count)
+\item 
+struct {\bf Employee} $\ast$$\ast$ {\bf duplicate\+\_\+employee\+\_\+array\+\_\+deep} (struct {\bf Employee} $\ast$$\ast$employee\+\_\+array, int count)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{structs.\+c@{structs.\+c}!M\+A\+X\+\_\+\+N\+A\+ME@{M\+A\+X\+\_\+\+N\+A\+ME}}
+\index{M\+A\+X\+\_\+\+N\+A\+ME@{M\+A\+X\+\_\+\+N\+A\+ME}!structs.\+c@{structs.\+c}}
+\subsubsection[{M\+A\+X\+\_\+\+N\+A\+ME}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+N\+A\+ME~10}\label{structs_8c_ac7c0207aa5a0e10d378be03b68041350}
+\doxyref{structs.\+c}{p.}{structs_8c} \begin{DoxyAuthor}{Author}
+Adonay Resom Functions that process the struct \doxyref{Employee}{p.}{structEmployee} I created 
+\end{DoxyAuthor}
+
+
+Referenced by random\+\_\+employee().
+
+
+
+\subsection{Function Documentation}
+\index{structs.\+c@{structs.\+c}!duplicate\+\_\+employee\+\_\+array\+\_\+deep@{duplicate\+\_\+employee\+\_\+array\+\_\+deep}}
+\index{duplicate\+\_\+employee\+\_\+array\+\_\+deep@{duplicate\+\_\+employee\+\_\+array\+\_\+deep}!structs.\+c@{structs.\+c}}
+\subsubsection[{duplicate\+\_\+employee\+\_\+array\+\_\+deep(struct Employee $\ast$$\ast$employee\+\_\+array, int count)}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Employee}$\ast$$\ast$ duplicate\+\_\+employee\+\_\+array\+\_\+deep (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Employee} $\ast$$\ast$}]{employee\+\_\+array, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{structs_8c_aef0f124c4b5c451e2bfc8987203ec102}
+Consumes a pointer to an array containing pointers to \doxyref{Employee}{p.}{structEmployee} structs and the array size, and copies all data from the struct the pointers are pointing to, into a new \doxyref{Employee}{p.}{structEmployee} struct. And then it creates a new pointer pointing to the new \doxyref{Employee}{p.}{structEmployee} struct and stores the pointers into a new array. In short it performs a deep copy. 
+\begin{DoxyParams}{Parameters}
+{\em employee\+\_\+array} & Array contaning pointers to the struct getting copied \\
+\hline
+{\em count} & size of array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array containing new pointers pointing to a new \doxyref{Employee}{p.}{structEmployee} struct the same data as the old one. 
+\end{DoxyReturn}
+
+
+References Employee\+::birth\+\_\+year, make\+\_\+employee(), Employee\+::name, and Employee\+::starting\+\_\+year.
+
+
+
+Referenced by main().
+
+\index{structs.\+c@{structs.\+c}!duplicate\+\_\+employee\+\_\+array\+\_\+shallow@{duplicate\+\_\+employee\+\_\+array\+\_\+shallow}}
+\index{duplicate\+\_\+employee\+\_\+array\+\_\+shallow@{duplicate\+\_\+employee\+\_\+array\+\_\+shallow}!structs.\+c@{structs.\+c}}
+\subsubsection[{duplicate\+\_\+employee\+\_\+array\+\_\+shallow(struct Employee $\ast$$\ast$employee\+\_\+array, int count)}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Employee}$\ast$$\ast$ duplicate\+\_\+employee\+\_\+array\+\_\+shallow (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Employee} $\ast$$\ast$}]{employee\+\_\+array, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{structs_8c_a37b3bf6b2a07fa68660a7b4c0b1fc06e}
+Consumes a pointer to an array containing pointers to \doxyref{Employee}{p.}{structEmployee} structs and the array size, and copies those pointers into another array that it creates and allocates. The new array also holds pointers to \doxyref{Employee}{p.}{structEmployee} structs. In short it performs a shallow copy. 
+\begin{DoxyParams}{Parameters}
+{\em employee\+\_\+array} & Array contaning pointers getting copied \\
+\hline
+{\em count} & size of array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array containing the same pointers pointing to the same \doxyref{Employee}{p.}{structEmployee} struct 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{structs.\+c@{structs.\+c}!free\+\_\+employee\+\_\+array@{free\+\_\+employee\+\_\+array}}
+\index{free\+\_\+employee\+\_\+array@{free\+\_\+employee\+\_\+array}!structs.\+c@{structs.\+c}}
+\subsubsection[{free\+\_\+employee\+\_\+array(struct Employee $\ast$$\ast$employee\+\_\+array, int count)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+employee\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Employee} $\ast$$\ast$}]{employee\+\_\+array, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{structs_8c_a791fe7d414259e84a41c7c5840f33424}
+Frees/\+Deallocates all the structs the pointer in the array are pointing to. 
+\begin{DoxyParams}{Parameters}
+{\em employee\+\_\+array} & Array contaning pointers getting deallocated \\
+\hline
+{\em count} & size of array \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by main().
+
+\index{structs.\+c@{structs.\+c}!make\+\_\+employee@{make\+\_\+employee}}
+\index{make\+\_\+employee@{make\+\_\+employee}!structs.\+c@{structs.\+c}}
+\subsubsection[{make\+\_\+employee(char $\ast$name, int birth\+\_\+year, int start\+\_\+year)}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Employee}$\ast$ make\+\_\+employee (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int}]{birth\+\_\+year, }
+\item[{int}]{start\+\_\+year}
+\end{DoxyParamCaption}
+)}\label{structs_8c_ae329e433130243371dfc89f57ba31f76}
+Creates and allocates an \doxyref{Employee}{p.}{structEmployee} struct and fill its fields with the paramaters passed into it 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the employee \\
+\hline
+{\em birth\+\_\+year} & The year of birth of the employee \\
+\hline
+{\em start\+\_\+year} & Year at which the employee got employed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to newly created and allocated \doxyref{Employee}{p.}{structEmployee} struct 
+\end{DoxyReturn}
+
+
+References Employee\+::birth\+\_\+year, mystrcpy(), Employee\+::name, and Employee\+::starting\+\_\+year.
+
+
+
+Referenced by duplicate\+\_\+employee\+\_\+array\+\_\+deep(), main(), and random\+\_\+employee().
+
+\index{structs.\+c@{structs.\+c}!print\+\_\+employee@{print\+\_\+employee}}
+\index{print\+\_\+employee@{print\+\_\+employee}!structs.\+c@{structs.\+c}}
+\subsubsection[{print\+\_\+employee(struct Employee $\ast$e)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+employee (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Employee} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\label{structs_8c_a4b321c650526afc60d629a0e32dbe362}
+Consumes a pointer to an \doxyref{Employee}{p.}{structEmployee} struct and prints the values of the fields of that struct. In other words, prints \doxyref{Employee}{p.}{structEmployee} struct 
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the \doxyref{Employee}{p.}{structEmployee} struct the user wants to be printed \\
+\hline
+\end{DoxyParams}
+
+
+References Employee\+::birth\+\_\+year, Employee\+::name, and Employee\+::starting\+\_\+year.
+
+
+
+Referenced by main(), and print\+\_\+employee\+\_\+array().
+
+\index{structs.\+c@{structs.\+c}!print\+\_\+employee\+\_\+array@{print\+\_\+employee\+\_\+array}}
+\index{print\+\_\+employee\+\_\+array@{print\+\_\+employee\+\_\+array}!structs.\+c@{structs.\+c}}
+\subsubsection[{print\+\_\+employee\+\_\+array(struct Employee $\ast$$\ast$employee\+\_\+array, int count)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+employee\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Employee} $\ast$$\ast$}]{employee\+\_\+array, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{structs_8c_aace08bc6a74aa9464befdb6e5a075ce2}
+Consumes a pointer to an array containing pointers to \doxyref{Employee}{p.}{structEmployee} structs and the array size, and uses those pointers to print each employee using the print\+\_\+employee function created to print \doxyref{Employee}{p.}{structEmployee} struct fields. 
+\begin{DoxyParams}{Parameters}
+{\em employee\+\_\+array} & Array contaning pointers to the struct getting printed \\
+\hline
+{\em count} & size of array \\
+\hline
+\end{DoxyParams}
+
+
+References print\+\_\+employee().
+
+
+
+Referenced by main().
+
+\index{structs.\+c@{structs.\+c}!random\+\_\+employee@{random\+\_\+employee}}
+\index{random\+\_\+employee@{random\+\_\+employee}!structs.\+c@{structs.\+c}}
+\subsubsection[{random\+\_\+employee()}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Employee}$\ast$ random\+\_\+employee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structs_8c_a994694e6329e1681cd1018c871726b6d}
+Generates randomly generated employee \begin{DoxyReturn}{Returns}
+A new \doxyref{Employee}{p.}{structEmployee} struct contaning randomly generated field values. 
+\end{DoxyReturn}
+
+
+References Employee\+::birth\+\_\+year, make\+\_\+employee(), M\+A\+X\+\_\+\+N\+A\+ME, Employee\+::name, random\+\_\+integer(), and random\+\_\+string().
+
+
+
+Referenced by main(), and random\+\_\+employee\+\_\+array().
+
+\index{structs.\+c@{structs.\+c}!random\+\_\+employee\+\_\+array@{random\+\_\+employee\+\_\+array}}
+\index{random\+\_\+employee\+\_\+array@{random\+\_\+employee\+\_\+array}!structs.\+c@{structs.\+c}}
+\subsubsection[{random\+\_\+employee\+\_\+array(int count)}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Employee}$\ast$$\ast$ random\+\_\+employee\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{structs_8c_a4a793099d15370bb8995709edc0d2df7}
+Generates an array of count(int) pointers pointing to randomly generated employees 
+\begin{DoxyParams}{Parameters}
+{\em count} & integer representing amount of random employees generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array containing pointer pointing to randomly generated employees. 
+\end{DoxyReturn}
+
+
+References random\+\_\+employee().
+
+
+
+Referenced by main().
+

@@ -1,0 +1,290 @@
+\section{General\+Rational Class Reference}
+\label{classGeneralRational}\index{General\+Rational@{General\+Rational}}
+
+
+{\ttfamily \#include $<$General\+Number.\+h$>$}
+
+Inheritance diagram for General\+Rational\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeneralRational}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf General\+Rational} ()
+\item 
+{\bf General\+Rational} (long {\bf top}, long {\bf bottom})
+\item 
+char $\ast$ {\bf to\+String} () const 
+\item 
+char $\ast$ {\bf foo} () const 
+\item 
+{\bf General\+Long} $\ast$ {\bf to\+General\+Long} () const 
+\item 
+{\bf General\+Rational} $\ast$ {\bf to\+General\+Rational} () const 
+\item 
+{\bf General\+Double} $\ast$ {\bf to\+General\+Double} () const 
+\item 
+void {\bf to\+Canonical\+Form} ()
+\item 
+{\bf General\+Number} $\ast$ {\bf add} ({\bf General\+Number} $\ast$gn) const 
+\item 
+{\bf General\+Number} $\ast$ {\bf subtract} ({\bf General\+Number} $\ast$gn) const 
+\item 
+{\bf General\+Number} $\ast$ {\bf multiply} ({\bf General\+Number} $\ast$gn) const 
+\item 
+{\bf General\+Number} $\ast$ {\bf divide} ({\bf General\+Number} $\ast$gn) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long {\bf top}
+\item 
+long {\bf bottom}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{General\+Rational@{General\+Rational}!General\+Rational@{General\+Rational}}
+\index{General\+Rational@{General\+Rational}!General\+Rational@{General\+Rational}}
+\subsubsection[{General\+Rational()}]{\setlength{\rightskip}{0pt plus 5cm}General\+Rational\+::\+General\+Rational (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classGeneralRational_a681f589c9e7699dbb1fdafd136abf325}
+Default constructor for \doxyref{General\+Rational}{p.}{classGeneralRational} \index{General\+Rational@{General\+Rational}!General\+Rational@{General\+Rational}}
+\index{General\+Rational@{General\+Rational}!General\+Rational@{General\+Rational}}
+\subsubsection[{General\+Rational(long top, long bottom)}]{\setlength{\rightskip}{0pt plus 5cm}General\+Rational\+::\+General\+Rational (
+\begin{DoxyParamCaption}
+\item[{long}]{top, }
+\item[{long}]{bottom}
+\end{DoxyParamCaption}
+)}\label{classGeneralRational_aa6f7a00036226fa620d77ac1a345fae0}
+Constructor for \doxyref{General\+Rational}{p.}{classGeneralRational} 
+\begin{DoxyParams}{Parameters}
+{\em top} & Numerator to store in the object \\
+\hline
+{\em bottom} & Denominator to store in the object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{General\+Rational@{General\+Rational}!add@{add}}
+\index{add@{add}!General\+Rational@{General\+Rational}}
+\subsubsection[{add(\+General\+Number $\ast$gn) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Rational\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{gn}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_ad9e849aee88d19f5c7c272104b76ce70}
+Converts \doxyref{General\+Number}{p.}{classGeneralNumber} passed in to \doxyref{General\+Rational}{p.}{classGeneralRational} and adds its value with the converted General\+Ration by the help of lcm() helper function. 
+\begin{DoxyParams}{Parameters}
+{\em gn} & \doxyref{General\+Number}{p.}{classGeneralNumber} we wanted added to the \doxyref{General\+Rational}{p.}{classGeneralRational} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the sum in \doxyref{General\+Rational}{p.}{classGeneralRational} form 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_abf66663792afad01a954d0326ee28bc7}.
+
+
+
+References bottom, find\+\_\+lcd(), to\+Canonical\+Form(), General\+Number\+::to\+General\+Rational(), and top.
+
+
+
+Referenced by main().
+
+\index{General\+Rational@{General\+Rational}!divide@{divide}}
+\index{divide@{divide}!General\+Rational@{General\+Rational}}
+\subsubsection[{divide(\+General\+Number $\ast$gn) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Rational\+::divide (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{gn}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_a81b9d20f4ce3b2109ee6eeee9334aedd}
+Converts \doxyref{General\+Number}{p.}{classGeneralNumber} passed in to \doxyref{General\+Rational}{p.}{classGeneralRational} and divides its value with the converted \doxyref{General\+Rational}{p.}{classGeneralRational} by inverting the top and bottom values of the converted value and multiplying the object with it. Then returns the result in \doxyref{General\+Rational}{p.}{classGeneralRational} form. 
+\begin{DoxyParams}{Parameters}
+{\em gn} & \doxyref{General\+Number}{p.}{classGeneralNumber} we wanted to divide the \doxyref{General\+Rational}{p.}{classGeneralRational} with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the quotient in \doxyref{General\+Rational}{p.}{classGeneralRational} form 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_a00210335039ff12f5d8cc8d94949a031}.
+
+
+
+References bottom, to\+Canonical\+Form(), General\+Number\+::to\+General\+Rational(), and top.
+
+\index{General\+Rational@{General\+Rational}!foo@{foo}}
+\index{foo@{foo}!General\+Rational@{General\+Rational}}
+\subsubsection[{foo() const }]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ General\+Rational\+::foo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classGeneralRational_a265451cfed295bc3711cf532ffa28d03}
+Demonstrates a non-\/virtual function. \begin{DoxyReturn}{Returns}
+Freshly-\/allocated C-\/stype string 
+\end{DoxyReturn}
+\index{General\+Rational@{General\+Rational}!multiply@{multiply}}
+\index{multiply@{multiply}!General\+Rational@{General\+Rational}}
+\subsubsection[{multiply(\+General\+Number $\ast$gn) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Rational\+::multiply (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{gn}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_a52f58fb3f7f1e21f5399e88d646182b5}
+Converts \doxyref{General\+Number}{p.}{classGeneralNumber} passed in to \doxyref{General\+Rational}{p.}{classGeneralRational} and multiplies its top and bottom values with the converted \doxyref{General\+Rational}{p.}{classGeneralRational}\textquotesingle{}s top and bottom values and then return\textquotesingle{}s the result in \doxyref{General\+Rational}{p.}{classGeneralRational} form. 
+\begin{DoxyParams}{Parameters}
+{\em gn} & \doxyref{General\+Number}{p.}{classGeneralNumber} we wanted multiplied to the \doxyref{General\+Rational}{p.}{classGeneralRational} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the sum in \doxyref{General\+Rational}{p.}{classGeneralRational} form 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_ac47d6c7deb64e3eee073a1e5105045fb}.
+
+
+
+References bottom, to\+Canonical\+Form(), General\+Number\+::to\+General\+Rational(), and top.
+
+\index{General\+Rational@{General\+Rational}!subtract@{subtract}}
+\index{subtract@{subtract}!General\+Rational@{General\+Rational}}
+\subsubsection[{subtract(\+General\+Number $\ast$gn) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number} $\ast$ General\+Rational\+::subtract (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{gn}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_a7b591901f7dfe12920d7fd3088bb97ff}
+Converts \doxyref{General\+Number}{p.}{classGeneralNumber} passed in to \doxyref{General\+Rational}{p.}{classGeneralRational} and subtracts its value with the converted \doxyref{General\+Rational}{p.}{classGeneralRational} by the help of lcm() helper function. 
+\begin{DoxyParams}{Parameters}
+{\em gn} & \doxyref{General\+Number}{p.}{classGeneralNumber} we wanted subtracted from the \doxyref{General\+Rational}{p.}{classGeneralRational} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the sum in \doxyref{General\+Rational}{p.}{classGeneralRational} form 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_ae9010718fcbc6fcfe54faabdd19408de}.
+
+
+
+References bottom, find\+\_\+lcd(), to\+Canonical\+Form(), General\+Number\+::to\+General\+Rational(), and top.
+
+\index{General\+Rational@{General\+Rational}!to\+Canonical\+Form@{to\+Canonical\+Form}}
+\index{to\+Canonical\+Form@{to\+Canonical\+Form}!General\+Rational@{General\+Rational}}
+\subsubsection[{to\+Canonical\+Form()}]{\setlength{\rightskip}{0pt plus 5cm}void General\+Rational\+::to\+Canonical\+Form (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classGeneralRational_a40a30e4d4386054abf0ceeacbebd6b1a}
+Finds the G\+CD of the nominator and denominator and divides them with their G\+CD to fing their lowest term. Also arranges position of negative sign \begin{DoxyReturn}{Returns}
+Same \doxyref{General\+Rational}{p.}{classGeneralRational} but in lowest term/canonical form 
+\end{DoxyReturn}
+
+
+References find\+\_\+gcd(), and gcd().
+
+
+
+Referenced by add(), divide(), main(), multiply(), and subtract().
+
+\index{General\+Rational@{General\+Rational}!to\+General\+Double@{to\+General\+Double}}
+\index{to\+General\+Double@{to\+General\+Double}!General\+Rational@{General\+Rational}}
+\subsubsection[{to\+General\+Double() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Double} $\ast$ General\+Rational\+::to\+General\+Double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_a45714e227a97f7dafdcff19ed87e2cbd}
+Generates an equivalent \doxyref{General\+Double}{p.}{classGeneralDouble} \begin{DoxyReturn}{Returns}
+Pointer to a freshly-\/allocated \doxyref{General\+Double}{p.}{classGeneralDouble} object 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_a597b8ff270d49970f70b0ba6e5246593}.
+
+\index{General\+Rational@{General\+Rational}!to\+General\+Long@{to\+General\+Long}}
+\index{to\+General\+Long@{to\+General\+Long}!General\+Rational@{General\+Rational}}
+\subsubsection[{to\+General\+Long() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Long} $\ast$ General\+Rational\+::to\+General\+Long (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_aadd587b17b9ce5bc6beea2bf065e68ca}
+Generates an equivalent \doxyref{General\+Long}{p.}{classGeneralLong} \begin{DoxyReturn}{Returns}
+Pointer to a freshly-\/allocated \doxyref{General\+Long}{p.}{classGeneralLong} object 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_acafc7321465d601588e47dc270bf147a}.
+
+
+
+Referenced by main().
+
+\index{General\+Rational@{General\+Rational}!to\+General\+Rational@{to\+General\+Rational}}
+\index{to\+General\+Rational@{to\+General\+Rational}!General\+Rational@{General\+Rational}}
+\subsubsection[{to\+General\+Rational() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Rational} $\ast$ General\+Rational\+::to\+General\+Rational (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_af474c9b5f3f31934c24ba47230cd5537}
+Generates an equivalent \doxyref{General\+Rational}{p.}{classGeneralRational} \begin{DoxyReturn}{Returns}
+Pointer to a freshly-\/allocated \doxyref{General\+Rational}{p.}{classGeneralRational} object 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_aec6e631e5b839b50224f5c2b76eb1162}.
+
+\index{General\+Rational@{General\+Rational}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!General\+Rational@{General\+Rational}}
+\subsubsection[{to\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ General\+Rational\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classGeneralRational_a592adc36a0593c960c197741ab5b50b9}
+Generates a printable representation of the object. \begin{DoxyReturn}{Returns}
+Freshly-\/allocated C-\/stype string 
+\end{DoxyReturn}
+
+
+Implements {\bf General\+Number} \doxyref{}{p.}{classGeneralNumber_aa3a0cdda717ff1e29d7c0c6ab2684b70}.
+
+
+
+References M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+I\+N\+\_\+\+L\+O\+NG.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Member Data Documentation}
+\index{General\+Rational@{General\+Rational}!bottom@{bottom}}
+\index{bottom@{bottom}!General\+Rational@{General\+Rational}}
+\subsubsection[{bottom}]{\setlength{\rightskip}{0pt plus 5cm}long General\+Rational\+::bottom\hspace{0.3cm}{\ttfamily [private]}}\label{classGeneralRational_a74835ffcc9a7b1026658da2fb75dc0d7}
+
+
+Referenced by add(), divide(), multiply(), and subtract().
+
+\index{General\+Rational@{General\+Rational}!top@{top}}
+\index{top@{top}!General\+Rational@{General\+Rational}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}long General\+Rational\+::top\hspace{0.3cm}{\ttfamily [private]}}\label{classGeneralRational_a771617023f9c874e6920b001ab394a57}
+
+
+Referenced by add(), divide(), multiply(), and subtract().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf General\+Number.\+h}\item 
+{\bf General\+Number.\+cpp}\end{DoxyCompactItemize}

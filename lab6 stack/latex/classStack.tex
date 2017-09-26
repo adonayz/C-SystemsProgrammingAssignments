@@ -1,0 +1,126 @@
+\section{Stack Class Reference}
+\label{classStack}\index{Stack@{Stack}}
+
+
+{\ttfamily \#include $<$objstack.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Stack} (int {\bf max\+\_\+cells})
+\item 
+{\bf $\sim$\+Stack} ()
+\item 
+int {\bf push} (void $\ast$ptr)
+\item 
+void $\ast$ {\bf pop} ()
+\item 
+void $\ast$ {\bf peek} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$$\ast$ {\bf stack\+\_\+base}
+\item 
+void $\ast$$\ast$ {\bf next}
+\item 
+int {\bf max\+\_\+cells}
+\item 
+int {\bf cells\+\_\+used}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to define a stack; each entry can hold a pointer to anything. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{Stack(int max\+\_\+cells)}]{\setlength{\rightskip}{0pt plus 5cm}Stack\+::\+Stack (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+\_\+cells}
+\end{DoxyParamCaption}
+)}\label{classStack_a4387c06b740fb8f08f66b0f408e78a1f}
+Create a stack by initializing the fields of the object, including allocating memory to hold the stack entries. 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+cells} & Maximum entries in the stack \\
+\hline
+\end{DoxyParams}
+\index{Stack@{Stack}!````~Stack@{$\sim$\+Stack}}
+\index{````~Stack@{$\sim$\+Stack}!Stack@{Stack}}
+\subsubsection[{$\sim$\+Stack()}]{\setlength{\rightskip}{0pt plus 5cm}Stack\+::$\sim$\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classStack_a40bd5dff912f0e5290777c4b46d17809}
+Destructor\+: cleans up a \doxyref{Stack}{p.}{classStack} object by deleting the memory for holding the stack entries, but not the entries themselves. 
+
+\subsection{Member Function Documentation}
+\index{Stack@{Stack}!peek@{peek}}
+\index{peek@{peek}!Stack@{Stack}}
+\subsubsection[{peek()}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Stack\+::peek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classStack_a90140ac6164933719b7987f7ea7d1cc8}
+Peek at top of stack, without popping \begin{DoxyReturn}{Returns}
+Top entry of the stack, N\+U\+LL if stack is empty. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\subsubsection[{pop()}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Stack\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classStack_a3d88defdf19383864b519080c02c9f16}
+Pops top of stack, and returns it. \begin{DoxyReturn}{Returns}
+Top entry of the stack, N\+U\+LL if stack is empty. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\subsubsection[{push(void $\ast$ptr)}]{\setlength{\rightskip}{0pt plus 5cm}int Stack\+::push (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\label{classStack_a790ba2da4d61719044eeb2a2356afac6}
+Pushes a pointer onto a \doxyref{Stack}{p.}{classStack}. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Pointer to be pushed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, -\/1 if not. 
+\end{DoxyReturn}
+
+
+Referenced by main().
+
+
+
+\subsection{Member Data Documentation}
+\index{Stack@{Stack}!cells\+\_\+used@{cells\+\_\+used}}
+\index{cells\+\_\+used@{cells\+\_\+used}!Stack@{Stack}}
+\subsubsection[{cells\+\_\+used}]{\setlength{\rightskip}{0pt plus 5cm}int Stack\+::cells\+\_\+used}\label{classStack_a970ed87caeab332e4425310fc5eb85ec}
+\index{Stack@{Stack}!max\+\_\+cells@{max\+\_\+cells}}
+\index{max\+\_\+cells@{max\+\_\+cells}!Stack@{Stack}}
+\subsubsection[{max\+\_\+cells}]{\setlength{\rightskip}{0pt plus 5cm}int Stack\+::max\+\_\+cells}\label{classStack_a20f466509d0c7f2551571222ab6534bb}
+\index{Stack@{Stack}!next@{next}}
+\index{next@{next}!Stack@{Stack}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$$\ast$ Stack\+::next}\label{classStack_af2b132a389a5ee194f59708ec4d0888e}
+\index{Stack@{Stack}!stack\+\_\+base@{stack\+\_\+base}}
+\index{stack\+\_\+base@{stack\+\_\+base}!Stack@{Stack}}
+\subsubsection[{stack\+\_\+base}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$$\ast$ Stack\+::stack\+\_\+base}\label{classStack_a8bf2ad81142312385ac28ef14497a823}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+{\bf objstack.\+h}\item 
+{\bf objstack.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\section{Tree.\+h File Reference}
+\label{Tree_8h}\index{Tree.\+h@{Tree.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Tree}
+\item 
+class {\bf Tnode}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf M\+A\+X\+\_\+\+C\+H\+A\+RS}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char {\bf random\+\_\+character} ()
+\item 
+char $\ast$ {\bf random\+\_\+string} (int length)
+\item 
+int {\bf random\+\_\+integer} (int max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Tree.\+h@{Tree.\+h}!M\+A\+X\+\_\+\+C\+H\+A\+RS@{M\+A\+X\+\_\+\+C\+H\+A\+RS}}
+\index{M\+A\+X\+\_\+\+C\+H\+A\+RS@{M\+A\+X\+\_\+\+C\+H\+A\+RS}!Tree.\+h@{Tree.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+C\+H\+A\+RS}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+C\+H\+A\+RS~10}\label{Tree_8h_a8adbf2b1e0569dded992fee665e86e70}
+
+
+Referenced by main().
+
+
+
+\subsection{Function Documentation}
+\index{Tree.\+h@{Tree.\+h}!random\+\_\+character@{random\+\_\+character}}
+\index{random\+\_\+character@{random\+\_\+character}!Tree.\+h@{Tree.\+h}}
+\subsubsection[{random\+\_\+character()}]{\setlength{\rightskip}{0pt plus 5cm}char random\+\_\+character (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{Tree_8h_ae8af4c2da3b8a2991018e1bc8aa1af38}
+Generates and returns a random capital letter/character by first generating a random number and using it as an index to randomly select a character from an array of characters containing all the capital letters \begin{DoxyReturn}{Returns}
+A single character. That is a randomly selected capital letter 
+\end{DoxyReturn}
+
+
+References random\+\_\+character().
+
+
+
+Referenced by random\+\_\+character(), and random\+\_\+string().
+
+\index{Tree.\+h@{Tree.\+h}!random\+\_\+integer@{random\+\_\+integer}}
+\index{random\+\_\+integer@{random\+\_\+integer}!Tree.\+h@{Tree.\+h}}
+\subsubsection[{random\+\_\+integer(int max)}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+integer (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{Tree_8h_a14c2b75285e2c48126d19d3a1dcdb075}
+Return a random number from 0 to maximum specified number. 
+\begin{DoxyParams}{Parameters}
+{\em max} & Maximum specified value for random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random number 
+\end{DoxyReturn}
+\index{Tree.\+h@{Tree.\+h}!random\+\_\+string@{random\+\_\+string}}
+\index{random\+\_\+string@{random\+\_\+string}!Tree.\+h@{Tree.\+h}}
+\subsubsection[{random\+\_\+string(int length)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ random\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{Tree_8h_a7c3a0010304f00add814906ffaaecc94}
+Creates, allocates and returns a pointer to a random string it has created. The string consists of all capital letters, and always a length that the user passes as a parameter. It uses the function \doxyref{random\+\_\+character()}{p.}{randomvaluetree_8cpp_ae8af4c2da3b8a2991018e1bc8aa1af38} repeatedly to generate a string of size length. 
+\begin{DoxyParams}{Parameters}
+{\em length} & Size of the newly genrated string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly allocated and randomly generated string. 
+\end{DoxyReturn}
+
+
+References random\+\_\+character().
+
+
+
+Referenced by main().
+

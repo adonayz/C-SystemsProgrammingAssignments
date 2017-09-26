@@ -1,0 +1,97 @@
+\section{randomvaluetree.\+cpp File Reference}
+\label{randomvaluetree_8cpp}\index{randomvaluetree.\+cpp@{randomvaluetree.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Tree.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\item 
+char {\bf random\+\_\+character} ()
+\item 
+char $\ast$ {\bf random\+\_\+string} (int length)
+\item 
+int {\bf random\+\_\+integer} (int max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{randomvaluetree.\+cpp@{randomvaluetree.\+cpp}!main@{main}}
+\index{main@{main}!randomvaluetree.\+cpp@{randomvaluetree.\+cpp}}
+\subsubsection[{main(int argc, char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{randomvaluetree_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+Program to demonstrate the \doxyref{Tree}{p.}{classTree} and \doxyref{Tnode}{p.}{classTnode} class with random charachters. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of words on the command line. \\
+\hline
+{\em argv} & Array of pointers to these words. \\
+\hline
+\end{DoxyParams}
+
+
+References Tree\+::add(), Tree\+::free\+Tree(), M\+A\+X\+\_\+\+C\+H\+A\+RS, Tree\+::print\+Ascending(), and random\+\_\+string().
+
+\index{randomvaluetree.\+cpp@{randomvaluetree.\+cpp}!random\+\_\+character@{random\+\_\+character}}
+\index{random\+\_\+character@{random\+\_\+character}!randomvaluetree.\+cpp@{randomvaluetree.\+cpp}}
+\subsubsection[{random\+\_\+character()}]{\setlength{\rightskip}{0pt plus 5cm}char random\+\_\+character (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{randomvaluetree_8cpp_ae8af4c2da3b8a2991018e1bc8aa1af38}
+Generates and returns a random capital letter/character by first generating a random number and using it as an index to randomly select a character from an array of characters containing all the capital letters \begin{DoxyReturn}{Returns}
+A single character. That is a randomly selected capital letter 
+\end{DoxyReturn}
+
+
+References random\+\_\+character().
+
+
+
+Referenced by random\+\_\+character(), and random\+\_\+string().
+
+\index{randomvaluetree.\+cpp@{randomvaluetree.\+cpp}!random\+\_\+integer@{random\+\_\+integer}}
+\index{random\+\_\+integer@{random\+\_\+integer}!randomvaluetree.\+cpp@{randomvaluetree.\+cpp}}
+\subsubsection[{random\+\_\+integer(int max)}]{\setlength{\rightskip}{0pt plus 5cm}int random\+\_\+integer (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{randomvaluetree_8cpp_a14c2b75285e2c48126d19d3a1dcdb075}
+Return a random number from 0 to maximum specified number. 
+\begin{DoxyParams}{Parameters}
+{\em max} & Maximum specified value for random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random number 
+\end{DoxyReturn}
+\index{randomvaluetree.\+cpp@{randomvaluetree.\+cpp}!random\+\_\+string@{random\+\_\+string}}
+\index{random\+\_\+string@{random\+\_\+string}!randomvaluetree.\+cpp@{randomvaluetree.\+cpp}}
+\subsubsection[{random\+\_\+string(int length)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ random\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{randomvaluetree_8cpp_a7c3a0010304f00add814906ffaaecc94}
+Creates, allocates and returns a pointer to a random string it has created. The string consists of all capital letters, and always a length that the user passes as a parameter. It uses the function \doxyref{random\+\_\+character()}{p.}{randomvaluetree_8cpp_ae8af4c2da3b8a2991018e1bc8aa1af38} repeatedly to generate a string of size length. 
+\begin{DoxyParams}{Parameters}
+{\em length} & Size of the newly genrated string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly allocated and randomly generated string. 
+\end{DoxyReturn}
+
+
+References random\+\_\+character().
+
+
+
+Referenced by main().
+

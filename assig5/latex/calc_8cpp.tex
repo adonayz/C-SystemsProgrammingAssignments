@@ -1,0 +1,85 @@
+\section{calc.\+cpp File Reference}
+\label{calc_8cpp}\index{calc.\+cpp@{calc.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}General\+Number.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\item 
+int {\bf start\+\_\+calculator} ()
+\item 
+{\bf General\+Number} $\ast$ {\bf calculate} ({\bf General\+Number} $\ast$fnum, {\bf General\+Number} $\ast$snum, char $\ast$oprtr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{calc.\+cpp@{calc.\+cpp}!calculate@{calculate}}
+\index{calculate@{calculate}!calc.\+cpp@{calc.\+cpp}}
+\subsubsection[{calculate(\+General\+Number $\ast$fnum, General\+Number $\ast$snum, char $\ast$oprtr)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\+Number}$\ast$ calculate (
+\begin{DoxyParamCaption}
+\item[{{\bf General\+Number} $\ast$}]{fnum, }
+\item[{{\bf General\+Number} $\ast$}]{snum, }
+\item[{char $\ast$}]{oprtr}
+\end{DoxyParamCaption}
+)}\label{calc_8cpp_a75b8be442566a5970c667ec91805fbe5}
+Consumes two General\+Numbers and an operation (string form) and then and then uses helper functions to apply operations on the given objects and then9 return the answer in \doxyref{General\+Number}{p.}{classGeneralNumber} object form 
+\begin{DoxyParams}{Parameters}
+{\em fnum} & Number the second number will be applied on by the operation \\
+\hline
+{\em snum} & Number that will be applied on the first number by the operation \\
+\hline
+{\em oprtr} & Operator to be applied in string form \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Answer of the operation on the two numbers in \doxyref{General\+Number}{p.}{classGeneralNumber} form 
+\end{DoxyReturn}
+
+
+References General\+Number\+::add(), General\+Number\+::divide(), General\+Number\+::multiply(), and General\+Number\+::subtract().
+
+
+
+Referenced by start\+\_\+calculator().
+
+\index{calc.\+cpp@{calc.\+cpp}!main@{main}}
+\index{main@{main}!calc.\+cpp@{calc.\+cpp}}
+\subsubsection[{main(int argc, char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{calc_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+Calculator program using \doxyref{General\+Number}{p.}{classGeneralNumber} class and its subclasses. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of words on the command line. \\
+\hline
+{\em argv} & Array of pointers to these words. \\
+\hline
+\end{DoxyParams}
+
+
+References start\+\_\+calculator().
+
+\index{calc.\+cpp@{calc.\+cpp}!start\+\_\+calculator@{start\+\_\+calculator}}
+\index{start\+\_\+calculator@{start\+\_\+calculator}!calc.\+cpp@{calc.\+cpp}}
+\subsubsection[{start\+\_\+calculator()}]{\setlength{\rightskip}{0pt plus 5cm}int start\+\_\+calculator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{calc_8cpp_a3ec86ab3ebbc502171aec4af40b1c6d3}
+Asks user to enter two numbers (arguments in string form) and an operation (char) and then parses those number to \doxyref{General\+Number}{p.}{classGeneralNumber} form and then calculates the result in accordance with the operation given \begin{DoxyReturn}{Returns}
+0 or 1 to indicate when users want to end calculator (loop) 
+\end{DoxyReturn}
+
+
+References calculate(), M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+O\+R\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+S\+\_\+\+E\+N\+T\+E\+R\+ED, General\+Number\+::parse(), and General\+Number\+::to\+String().
+
+
+
+Referenced by main().
+
